@@ -207,7 +207,7 @@ script = SubResource("GDScript_fbqkj")
 sprite_frames = SubResource("SpriteFrames_cheel")
 animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.151484
+frame_progress = 0.523594
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rnkj5")
