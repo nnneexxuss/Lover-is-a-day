@@ -6,7 +6,7 @@
 script/source = "extends CharacterBody2D
 
 @onready var animacoes: AnimatedSprite2D = $AnimatedSprite2D
-@export var speed: int = 200
+@export var speed: int = 100
 var direction = \"down\"
 var last_direction = \"down\" #storage the last direction used
 var idle_anim : String
@@ -198,7 +198,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rnkj5"]
-size = Vector2(12, 14)
+size = Vector2(4, 4)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = SubResource("GDScript_fbqkj")
@@ -207,9 +207,9 @@ script = SubResource("GDScript_fbqkj")
 sprite_frames = SubResource("SpriteFrames_cheel")
 animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.523594
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_rnkj5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
