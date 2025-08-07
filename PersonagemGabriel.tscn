@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://b8a66onaabebi"]
+[gd_scene load_steps=24 format=3 uid="uid://b8a66onaabebi"]
 
 [ext_resource type="Texture2D" uid="uid://cjw8et01iokj8" path="res://prototype_character.png" id="1_byv1j"]
+[ext_resource type="Texture2D" uid="uid://e70dnsvv3s7m" path="res://prototype_character-1.png.png" id="2_mjafh"]
 
 [sub_resource type="GDScript" id="GDScript_fbqkj"]
 script/source = "extends CharacterBody2D
@@ -78,20 +79,20 @@ region = Rect2(64, 96, 32, 32)
 atlas = ExtResource("1_byv1j")
 region = Rect2(96, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8bn0s"]
-atlas = ExtResource("1_byv1j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfa5r"]
+atlas = ExtResource("2_mjafh")
 region = Rect2(0, 128, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wgq7t"]
-atlas = ExtResource("1_byv1j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r30a5"]
+atlas = ExtResource("2_mjafh")
 region = Rect2(32, 128, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_27tq6"]
-atlas = ExtResource("1_byv1j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekcgc"]
+atlas = ExtResource("2_mjafh")
 region = Rect2(64, 128, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kvewn"]
-atlas = ExtResource("1_byv1j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2y2ji"]
+atlas = ExtResource("2_mjafh")
 region = Rect2(96, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ve0i"]
@@ -164,16 +165,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8bn0s")
+"texture": SubResource("AtlasTexture_nfa5r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wgq7t")
+"texture": SubResource("AtlasTexture_r30a5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_27tq6")
+"texture": SubResource("AtlasTexture_ekcgc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kvewn")
+"texture": SubResource("AtlasTexture_2y2ji")
 }],
 "loop": true,
 "name": &"walk_right",
@@ -205,8 +206,9 @@ script = SubResource("GDScript_fbqkj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cheel")
-animation = &"idle_down"
+animation = &"walk_down"
 autoplay = "idle_down"
+frame_progress = 0.903844
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
